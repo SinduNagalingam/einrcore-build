@@ -53,12 +53,12 @@ function startGulp(name, opts) {
 
   opts = opts || {};
   var browser = !opts.skipBrowser;
-  var fullname = name ? 'litecore-' + name : 'litecore';
+  var fullname = name ? 'einrcore-' + name : 'einrcore';
   var files = ['lib/**/*.js'];
   var tests = ['test/**/*.js'];
   var alljs = files.concat(tests);
 
-  var buildPath = './node_modules/litecore-build/';
+  var buildPath = './node_modules/einrcore-build/';
   var buildModulesPath = buildPath + 'node_modules/';
   var buildBinPath = buildPath + 'node_modules/.bin/';
 
@@ -102,9 +102,9 @@ function startGulp(name, opts) {
     var browserifyCommand;
 
     if (name !== 'lib') {
-      browserifyCommand = buildBinPath + 'browserify --require ./index.js:' + fullname + ' --external litecore-lib -o ' + fullname + '.js';
+      browserifyCommand = buildBinPath + 'browserify --require ./index.js:' + fullname + ' --external einrcore-lib -o ' + fullname + '.js';
     } else {
-      browserifyCommand = buildBinPath + 'browserify --require ./index.js:litecore-lib -o litecore-lib.js';
+      browserifyCommand = buildBinPath + 'browserify --require ./index.js:einrcore-lib -o einrcore-lib.js';
     }
 
     gulp.task('browser:uncompressed', shell.task([
@@ -293,7 +293,7 @@ function startGulp(name, opts) {
   });
 
   gulp.task('release:push', function(cb) {
-    git.push('litecoin-project', 'master', {
+    git.push('einrcoin-project', 'master', {
       args: ''
     }, cb);
   });
@@ -302,7 +302,7 @@ function startGulp(name, opts) {
     var pjson = require('../../package.json');
     var name = 'v' + pjson.version;
     git.tag(name, 'Release ' + name, function() {
-      git.push('litecoin-project', name, cb);
+      git.push('einrcoin-project', name, cb);
     });
   });
 

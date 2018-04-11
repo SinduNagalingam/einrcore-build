@@ -1,17 +1,17 @@
 {
-  "name": "litecore-build",
+  "name": "einrcore-build",
   "version": "0.5.5",
-  "description": "A helper for common tasks to build litecore modules'",
+  "description": "A helper for common tasks to build einrcore modules'",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/litecoin-project/litecore-build"
+    "url": "https://github.com/SinduNagalingam/einrcore-build"
   },
   "keywords": [
-    "litecore"
+    "einrcore"
   ],
   "contributors": [
     {
@@ -37,9 +37,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/litecoin-project/litecore-build/issues"
+    "url": "hhttps://github.com/SinduNagalingam/einrcore-build/issues"
   },
-  "homepage": "https://github.com/litecoin-project/litecore-build",
+  "homepage": "https://github.com/SinduNagalingam/einrcore-build",
   "dependencies": {
     "brfs": "^1.2.0",
     "browserify": "~13.1.0",
